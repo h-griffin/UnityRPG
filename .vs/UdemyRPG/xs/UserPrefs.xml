@@ -1,19 +1,18 @@
 ﻿<Properties StartupConfiguration="{5821A311-B3A1-8808-7B29-AD69631D1F18}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AreaExit.cs">
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="0" Y="0" Width="1440" Height="900">
-        <Files>
-          <File FileName="Assets/Scripts/PlayerController.cs" Line="17" Column="39" />
-          <File FileName="Assets/Scripts/AreaExit.cs" Line="31" Column="6" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AreaEntrance.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AreaEntrance.cs" Line="14" Column="15" />
+      <File FileName="Assets/Scripts/AreaExit.cs" Line="12" Column="56" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="30" Column="66" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UdemyRPG" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="AreaEntrance.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -22,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ceb9866a-966b-4b6b-9edd-a7546e250128" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="01a6c60e-a32f-4f12-8455-70cf50b68d58" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

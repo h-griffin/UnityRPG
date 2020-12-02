@@ -147,7 +147,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1569718563
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +369,7 @@ MonoBehaviour:
   theRB: {fileID: 1713682346}
   moveSpeed: 5
   myAnim: {fileID: 1713682349}
+  areaTransitionName: 
 --- !u!95 &1713682349
 Animator:
   serializedVersion: 3
@@ -533,6 +534,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 740259841, guid: fe348d21c340349e98af82bcb951fc72, type: 3}
+      propertyPath: transitionName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8946705066287771035, guid: fe348d21c340349e98af82bcb951fc72,
         type: 3}
       propertyPath: m_Name
@@ -542,6 +547,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771036, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.053405285
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771036, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.4619489
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771036, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.37383842
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771036, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.7476768
       objectReference: {fileID: 0}
     - target: {fileID: 8946705066287771037, guid: fe348d21c340349e98af82bcb951fc72,
         type: 3}
@@ -597,6 +622,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771038, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: areaTransitionName
+      value: Countryside-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771038, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: areaToLoad
+      value: Test2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe348d21c340349e98af82bcb951fc72, type: 3}

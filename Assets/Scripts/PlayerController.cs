@@ -8,13 +8,26 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D theRB;
     public float moveSpeed;
 
-    // ANIMATION
-    public Animator myAnim;
+    public Animator myAnim; 
+    
+    public static PlayerController instance;    // only one player
+
+    public string areaTransitionName; // exit just used
+
 
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        if(instance == null)    // only first player
+        {
+            instance = this;    // 'this' current player
+        }
+        else 
+        {
+            Destroy(gameObject); // no two players
+        }
+
+        DontDestroyOnLoad(gameObject); // new scene, same session
     }
 
     // Update is called once per frame

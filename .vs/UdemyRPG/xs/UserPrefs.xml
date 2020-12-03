@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{5821A311-B3A1-8808-7B29-AD69631D1F18}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AreaEntrance.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraController.cs">
     <Files>
-      <File FileName="Assets/Scripts/AreaEntrance.cs" Line="14" Column="15" />
-      <File FileName="Assets/Scripts/AreaExit.cs" Line="12" Column="56" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="30" Column="66" />
+      <File FileName="Assets/Scripts/AreaEntrance.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/AreaExit.cs" />
+      <File FileName="Assets/Scripts/PlayerController.cs" />
+      <File FileName="Assets/Scripts/PlayerLoader.cs" Line="15" Column="33" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="21" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +13,7 @@
           <Node name="UdemyRPG" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="AreaEntrance.cs" selected="True" />
+                <Node name="CameraController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="01a6c60e-a32f-4f12-8455-70cf50b68d58" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c36feb32-1598-4ba8-b86b-e061b6c139bc" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -43,7 +43,7 @@ public class CharStats : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            AddExp(500);
+            //AddExp(500); // testing
         }
     }
 

@@ -9,7 +9,7 @@
       <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="27" Column="18" />
       <File FileName="Assets/Scripts/DialogManager.cs" Line="70" Column="37" />
       <File FileName="Assets/Scripts/DialogActivator.cs" Line="25" Column="65" />
-      <File FileName="Assets/Scripts/CharStats.cs" Line="8" Column="23" />
+      <File FileName="Assets/Scripts/CharStats.cs" Line="46" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

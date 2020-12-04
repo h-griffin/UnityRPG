@@ -14,6 +14,8 @@ public class AreaEntrance : MonoBehaviour
             //player position   =    position of script is attached to /enterance
             PlayerController.instance.transform.position = transform.position; 
         }
+
+        UIFade.instance.FadeFromBlack();
     }
 
     // Update is called once per frame

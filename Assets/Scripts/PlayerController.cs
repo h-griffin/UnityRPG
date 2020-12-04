@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     public string areaTransitionName; // exit just used
 
+    private Vector3 bottomLeftLimit;
+    private Vector3 topRightLimit;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,10 @@ public class PlayerController : MonoBehaviour
         }
         else 
         {
-            Destroy(gameObject); // no two players
+            if(instance != this)
+            {
+                Destroy(gameObject); // no two players
+            }
         }
 
         DontDestroyOnLoad(gameObject); // new scene, same session
@@ -44,5 +49,17 @@ public class PlayerController : MonoBehaviour
             myAnim.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
         }
 
+        // keep player in map bounds
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
+            Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y),
+            transform.position.z);
+    }
+
+    public void SetBounds(Vector3 botLeft, Vector3 topRight) // call from camera with tilemap limits
+    {
+        // receive map limits from camera + keep player away from actual boarder
+        bottomLeftLimit = botLeft + new Vector3(.5f, 1f, 0f);
+        topRightLimit = topRight + new Vector3(-.5f, -1f, 0f);
     }
 }

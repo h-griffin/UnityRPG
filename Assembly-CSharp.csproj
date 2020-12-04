@@ -64,8 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AreaEntrance.cs" />
     <Compile Include="Assets\Scripts\AreaExit.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\DialogManager.cs" />
+    <Compile Include="Assets\Scripts\EssentialsLoader.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerLoader.cs" />
+    <Compile Include="Assets\Scripts\UIFade.cs" />
     <None Include="Assets\Udemy RPG Assets\Licence.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.15f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

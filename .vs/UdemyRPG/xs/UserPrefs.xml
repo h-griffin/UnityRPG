@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{5821A311-B3A1-8808-7B29-AD69631D1F18}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharStats.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EssentialsLoader.cs">
     <Files>
       <File FileName="Assets/Scripts/CameraController.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="20" Column="26" />
-      <File FileName="Assets/Scripts/UIFade.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/AreaEntrance.cs" Line="19" Column="6" />
-      <File FileName="Assets/Scripts/AreaExit.cs" Line="34" Column="52" />
-      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="27" Column="18" />
-      <File FileName="Assets/Scripts/DialogManager.cs" Line="70" Column="37" />
-      <File FileName="Assets/Scripts/DialogActivator.cs" Line="25" Column="65" />
-      <File FileName="Assets/Scripts/CharStats.cs" Line="8" Column="23" />
+      <File FileName="Assets/Scripts/PlayerController.cs" />
+      <File FileName="Assets/Scripts/UIFade.cs" />
+      <File FileName="Assets/Scripts/AreaEntrance.cs" />
+      <File FileName="Assets/Scripts/AreaExit.cs" />
+      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/DialogManager.cs" />
+      <File FileName="Assets/Scripts/DialogActivator.cs" />
+      <File FileName="Assets/Scripts/CharStats.cs" Line="89" Column="1" />
+      <File FileName="Assets/Scripts/PlayerLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +19,7 @@
           <Node name="UdemyRPG" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="CharStats.cs" selected="True" />
+                <Node name="EssentialsLoader.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -27,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b55989b-6be4-4b1f-b9c4-2a6ac075b486" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a1a89d4f-7eed-4b0b-924c-41e13f4d496b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

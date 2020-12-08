@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     public Item GetItemDetails(string ItemToGrab)
     {
+        ItemToGrab = ItemToGrab.Trim();
         for (int i = 0; i < refereceItems.Length; i++)
         {
             if(refereceItems[i].itemName == ItemToGrab)
@@ -49,5 +50,34 @@ public class GameManager : MonoBehaviour
 
 
         return null;
+    }
+
+    public void SortItems()
+    {
+        // remove blank item spots
+
+        bool itemsAfterSpace = true;
+
+        while (itemsAfterSpace)
+        {
+            itemsAfterSpace = false;
+            for (int i = 0; i < itemsHeld.Length - 1; i++)
+            {
+                if (itemsHeld[i] == "")
+                {
+                    itemsHeld[i] = itemsHeld[i + 1]; // empty grab next one
+                    itemsHeld[i + 1] = "";
+
+                    numberofItems[i] = numberofItems[i + 1];
+                    numberofItems[i + 1] = 0;
+
+                    if(itemsHeld[i] != "")
+                    {
+                        itemsAfterSpace = true;
+                    }
+                }
+            }
+
+        }
     }
 }

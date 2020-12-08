@@ -71,6 +71,8 @@ public class DialogManager : MonoBehaviour
 
         justStarted = true;
 
+        //GameManager.instance.dialogActive = true;
+
     }
 
     public void checkIfName()

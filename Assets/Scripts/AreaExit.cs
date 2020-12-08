@@ -43,6 +43,8 @@ public class AreaExit : MonoBehaviour
         {
             //SceneManager.LoadScene(areaToLoad);
             shouldLoadAfterFade = true;
+            GameManager.instance.fadeingBetweenAreas = true;
+
             UIFade.instance.FadeToBlack();
 
 

@@ -21,13 +21,21 @@ public class GameMenu : MonoBehaviour
     public Image statusImage;
 
     public ItemButton[] itemButtons;
+    public string selectedItem;
+    public Item activeItem;
+    public Text itemName, itemDescription, useButtonText; 
+
+    public static GameMenu instance;
+
+    public GameObject itemCharChoiceMenu;   // for who? 
+    public Text[] itemCharChoiceNames;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
@@ -78,7 +86,7 @@ public class GameMenu : MonoBehaviour
         }
     }
 
-    public void ToggleWindow(int windowNumber)
+    public void ToggleWindow(int windowNumber) // switch menu screens
     {
         UpdateMainStats();
 
@@ -93,6 +101,8 @@ public class GameMenu : MonoBehaviour
                 windows[i].SetActive(false);
             }
         }
+
+        itemCharChoiceMenu.SetActive(false); // items > status 
     }
 
     public void CloseMenu()
@@ -103,6 +113,8 @@ public class GameMenu : MonoBehaviour
         }
         theMenu.SetActive(false);
         GameManager.instance.gameMenuOpen = false;
+
+        itemCharChoiceMenu.SetActive(false); // items > status
     }
 
     public void OpenStatus()
@@ -161,5 +173,55 @@ public class GameMenu : MonoBehaviour
                 itemButtons[i].ammountText.text = "";
             }
         }
+    }
+
+    public void SelectItem(Item newItem)
+    {
+        // update game menue display info /inventory
+        activeItem = newItem;
+
+        // if armor/weap change button text
+        if (activeItem.isItem)
+        {
+            useButtonText.text = "Use";
+        }
+        if (activeItem.isWeapon || activeItem.isArmor)
+        {
+            useButtonText.text = "Equip";
+        }
+
+        itemName.text = activeItem.itemName;
+        itemDescription.text = activeItem.description;
+    }
+
+    public void DiscardItem()
+    {
+        if(activeItem != null)
+        {
+            GameManager.instance.RemoveItem(activeItem.itemName);
+        }
+    }
+
+    public void OpenItemCharChoice()
+    {
+        itemCharChoiceMenu.SetActive(true);
+        for (int i = 0; i < itemCharChoiceNames.Length; i++)
+        {
+            itemCharChoiceNames[i].text = GameManager.instance.playerStats[i].charName;
+
+            // looking at name > set active button if player active/exists
+            itemCharChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instance.playerStats[i].gameObject.activeInHierarchy);
+        }
+
+    }
+    public void CloseCharChoice()
+    {
+        itemCharChoiceMenu.SetActive(false);
+    }
+
+    public void UseItem(int selectChar)
+    {
+        activeItem.Use(selectChar);
+        CloseCharChoice();
     }
 }

@@ -24,4 +24,13 @@ public class ItemButton : MonoBehaviour
     {
         
     }
+
+    public void Press()
+    {
+        if(GameManager.instance.itemsHeld[buttonValue] != "")
+        {
+            // set active item and update info in game menu
+            GameMenu.instance.SelectItem(GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[buttonValue]));
+        }
+    }
 }

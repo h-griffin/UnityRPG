@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
     public CharStats[] playerStats;
 
     // two public bools   v             
-    public bool gameMenuOpen, fadeingBetweenAreas; // dialogActive,;
+    public bool gameMenuOpen, fadeingBetweenAreas, shopActive; // dialogActive,;
 
     public string[] itemsHeld;
     public int[] numberofItems;
     public Item[] refereceItems;
+
+    public int currentgold;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +25,13 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(gameObject);
+        SortItems(); // so world items stack in inventory
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameMenuOpen  || fadeingBetweenAreas) //|| dialogActive
+        if (gameMenuOpen  || fadeingBetweenAreas || shopActive) //|| dialogActive
         {
             PlayerController.instance.canMove = false;
         }

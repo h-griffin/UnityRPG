@@ -101,9 +101,9 @@ MonoBehaviour:
   description: Restores 50MP
   value: 5
   itemSprite: {fileID: 21300004, guid: 0bc4ed27aef38a44bb72e80f9beb5326, type: 3}
-  ammointToChange: 50
-  affectHP: 1
-  affectMP: 0
+  ammountToChange: 50
+  affectHP: 0
+  affectMP: 1
   affectStrength: 0
   weaponStrength: 0
   armorStrength: 0

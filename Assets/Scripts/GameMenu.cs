@@ -30,7 +30,7 @@ public class GameMenu : MonoBehaviour
     public GameObject itemCharChoiceMenu;   // for who? 
     public Text[] itemCharChoiceNames;
 
-
+    public Text goldText;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +84,8 @@ public class GameMenu : MonoBehaviour
                 charStatHolder[i].SetActive(false);
             }
         }
+
+        goldText.text = GameManager.instance.currentgold.ToString() + "g";
     }
 
     public void ToggleWindow(int windowNumber) // switch menu screens
@@ -143,11 +145,22 @@ public class GameMenu : MonoBehaviour
         {
             statusWpnEqpd.text = playerStats[selected].equippedWpn;
         }
+        else
+        {
+            statusWpnEqpd.text = "None"; // fixes other players bug
+        }
+
         statusWpnPwr.text = playerStats[selected].wpnPwr.ToString();
+
         if (playerStats[selected].equippedArmr != "")
         {
             statusArmrEqpd.text = playerStats[selected].equippedArmr;
         }
+        else
+        {
+            statusArmrEqpd.text = "None";
+        }
+
         statusArmorPwr.text = playerStats[selected].armrPwr.ToString();
         statusEXP.text = (playerStats[selected].expToNextLevel[playerStats[selected].playerLevel] - playerStats[selected].currentEXP).ToString();
         statusImage.sprite = playerStats[selected].charImage;
@@ -209,12 +222,12 @@ public class GameMenu : MonoBehaviour
         {
             itemCharChoiceNames[i].text = GameManager.instance.playerStats[i].charName;
 
-            // looking at name > set active button if player active/exists
+            // dont show button if player inactive
             itemCharChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instance.playerStats[i].gameObject.activeInHierarchy);
         }
 
     }
-    public void CloseCharChoice()
+    public void CloseItemCharChoice()
     {
         itemCharChoiceMenu.SetActive(false);
     }
@@ -222,6 +235,6 @@ public class GameMenu : MonoBehaviour
     public void UseItem(int selectChar)
     {
         activeItem.Use(selectChar);
-        CloseCharChoice();
+        CloseItemCharChoice();
     }
 }

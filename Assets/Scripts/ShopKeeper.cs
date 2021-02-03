@@ -6,7 +6,7 @@ public class ShopKeeper : MonoBehaviour
 {
 
     private bool canOpen;
-    public string[] itemsForSale;
+    public string[] itemsForSale = new string[40];
 
     // Start is called before the first frame update
     void Start()

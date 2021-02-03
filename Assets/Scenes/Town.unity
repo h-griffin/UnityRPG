@@ -127,6 +127,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1197127864479406108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &113387346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113387345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d00dbc2931471ebaaadb61a0dcd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - enter the cave
+  - quest test
+  - save teh world
+  - fight the dragon
+  questMarkersComplete: 
 --- !u!1001 &118778712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18304,117 +18323,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.size
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.size
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.data[0]
-      value: 
-      objectReference: {fileID: 7512799680109410473, guid: 510187b891fd645f5acb197cd93f032e,
-        type: 3}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.data[1]
-      value: 
-      objectReference: {fileID: 7184936422118444732, guid: 66b7710bb516c4a6ebb441032e3fe816,
-        type: 3}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.data[2]
-      value: 
-      objectReference: {fileID: 3741057769891707777, guid: 4bf44a3a03c3e43e7bc80081fc6ffe5a,
-        type: 3}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.data[3]
-      value: 
-      objectReference: {fileID: 5544370114329683185, guid: 6fd0c59754cfe4261b76bc789c5150cb,
-        type: 3}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.data[4]
-      value: 
-      objectReference: {fileID: 1631677995285669823, guid: 86a5954471b994993b5b3d6573762dd8,
-        type: 3}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: refereceItems.Array.data[5]
-      value: 
-      objectReference: {fileID: 4598614006059777269, guid: b8fc1fbeb2b1645bab6e0fe538cb7f4a,
-        type: 3}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.data[4]
-      value: HealthPotion
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.data[4]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.data[7]
-      value: IronSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.data[7]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.data[28]
-      value: ManaPotion
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.data[28]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.data[38]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.data[38]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.data[22]
-      value: LeatherArmor
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.data[22]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: itemsHeld.Array.data[14]
-      value: WoodenSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197127864592793422, guid: e38f5e3ff37be44d297011195f61cf4b,
-        type: 3}
-      propertyPath: numberofItems.Array.data[14]
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1197127864592793423, guid: e38f5e3ff37be44d297011195f61cf4b,
         type: 3}

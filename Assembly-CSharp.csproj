@@ -78,6 +78,8 @@
     <Compile Include="Assets\Scripts\PickupItem.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerLoader.cs" />
+    <Compile Include="Assets\Scripts\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\QuestObjectActivator.cs" />
     <Compile Include="Assets\Scripts\Shop.cs" />
     <Compile Include="Assets\Scripts\ShopKeeper.cs" />
     <Compile Include="Assets\Scripts\UIFade.cs" />

@@ -127,6 +127,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1197127864479406108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &113387346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113387345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d00dbc2931471ebaaadb61a0dcd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - enter the cave
+  - quest test
+  - save teh world
+  - fight the dragon
+  questMarkersComplete: 
 --- !u!1001 &118778712
 PrefabInstance:
   m_ObjectHideFlags: 0

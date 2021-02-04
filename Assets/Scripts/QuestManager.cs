@@ -22,7 +22,7 @@ public class QuestManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log(CheckIfComplete("quest test"));
+            Debug.Log("[CheckIfComplete] " + CheckIfComplete("quest test"));
         }
     }
 
@@ -71,4 +71,6 @@ public class QuestManager : MonoBehaviour
             }
         }
     }
+
+    
 }

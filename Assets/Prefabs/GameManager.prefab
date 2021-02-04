@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197127864592793423}
   - component: {fileID: 1197127864592793422}
+  - component: {fileID: 113387346}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -165,6 +166,26 @@ MonoBehaviour:
   - {fileID: 1631677995285669823, guid: 86a5954471b994993b5b3d6573762dd8, type: 3}
   - {fileID: 4598614006059777269, guid: b8fc1fbeb2b1645bab6e0fe538cb7f4a, type: 3}
   currentgold: 0
+--- !u!114 &113387346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197127864592793421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d00dbc2931471ebaaadb61a0dcd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - enter the cave
+  - quest test
+  - fight the dragon
+  - do something
+  - save the world
+  questMarkersComplete: 
 --- !u!1 &3710086020836181825
 GameObject:
   m_ObjectHideFlags: 0

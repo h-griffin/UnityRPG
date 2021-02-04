@@ -3324,7 +3324,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 740259841, guid: fe348d21c340349e98af82bcb951fc72, type: 3}
       propertyPath: transitionName
-      value: Town-1
+      value: Shop-1
       objectReference: {fileID: 0}
     - target: {fileID: 740259842, guid: fe348d21c340349e98af82bcb951fc72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3418,6 +3418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: areaToLoad
       value: Town
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946705066287771038, guid: fe348d21c340349e98af82bcb951fc72,
+        type: 3}
+      propertyPath: areaTransitionName
+      value: Shop-1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe348d21c340349e98af82bcb951fc72, type: 3}

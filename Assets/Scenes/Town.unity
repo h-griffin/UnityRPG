@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 8655284062948781064, guid: 0b2d5c0d1d74b43b4b9c9197835fd197,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2d5c0d1d74b43b4b9c9197835fd197, type: 3}
@@ -281,19 +281,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4526220516423585255, guid: ed8a30b65ee5b41eda716fe0fffc39f1,
         type: 3}
-      propertyPath: theMap
-      value: 
-      objectReference: {fileID: 1679457124}
-    - target: {fileID: 4526220516423585255, guid: ed8a30b65ee5b41eda716fe0fffc39f1,
-        type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 118778713}
     - target: {fileID: 4526220516423585255, guid: ed8a30b65ee5b41eda716fe0fffc39f1,
         type: 3}
-      propertyPath: musicToPlay
-      value: 5
-      objectReference: {fileID: 0}
+      propertyPath: theMap
+      value: 
+      objectReference: {fileID: 1679457124}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8a30b65ee5b41eda716fe0fffc39f1, type: 3}
 --- !u!1 &194424714

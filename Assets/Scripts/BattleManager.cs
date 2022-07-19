@@ -15,11 +15,17 @@ public class BattleManager : MonoBehaviour
     public Transform[] playerPositions;
     public Transform[] enemyPositions;
 
-
     public BattleChar[] playerPrefabs;
     public BattleChar[] enemyPrefabs;
 
+    // players / enemies
     public List<BattleChar> activeBattlers = new List<BattleChar>(); // more versatile than array/dont have to loop
+
+    //turns
+    public int currentTurn; //cycle through active batlers
+    public bool turnWaiting; // waiting for turn to end (input from ayer or enemy move
+
+    public GameObject uiButtonsHolder;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +40,28 @@ public class BattleManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             BattleStart( new string[] { "Eyeball", "Spider", "Skeleton" });
+        }
+
+        // turns
+        if (_battleActive)
+        {
+            if (turnWaiting)
+            {
+                // player or enemy 
+                if (activeBattlers[currentTurn].isPlayer)
+                {
+                    uiButtonsHolder.SetActive(true);
+                } else
+                {
+                    uiButtonsHolder.SetActive(false);
+
+                    // enemy should atttack
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                NextTurn();
+            }
         }
     }
 
@@ -105,6 +133,69 @@ public class BattleManager : MonoBehaviour
                 }
             }
 
+            // start turns
+            turnWaiting = true;
+            currentTurn = Random.Range(0, activeBattlers.Count);
+        }
+    }
+
+    public void NextTurn()
+    {
+        currentTurn++;
+        if(currentTurn >= activeBattlers.Count)
+        {
+            currentTurn = 0;
+        }
+
+        turnWaiting = true;
+        UpdateBattle();
+    }
+
+    public void UpdateBattle()
+    {
+        // check deaths
+        bool allEnemiesDead = true;
+        bool allPlayersDead = true;
+
+        for(int i = 0; i < activeBattlers.Count; i++)
+        {
+            // is activebattler health below zero
+            if(activeBattlers[i].currentHP < 0)
+            {
+                activeBattlers[i].currentHP = 0;
+            }
+
+            // is active battler health zero
+            if(activeBattlers[i].currentHP == 0)
+            {
+                // handle dead battler
+            }
+            else
+            {
+                if (activeBattlers[i].isPlayer)
+                {
+                    allPlayersDead = false;
+                }else
+                {
+                    allEnemiesDead = false;
+                }
+            }
+        }
+
+        if(allEnemiesDead || allPlayersDead)
+        {
+            if (allEnemiesDead)
+            {
+                // end battle in vicory 
+            }
+            else
+            {
+                // end battle in failure
+            }
+
+            battleScene.SetActive(false);
+            GameManager.instance.battleActive = false;
+            _battleActive = false;
         }
     }
 }

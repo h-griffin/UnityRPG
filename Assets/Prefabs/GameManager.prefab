@@ -49,9 +49,9 @@ MonoBehaviour:
   expToNextLevel: 
   maxLevel: 100
   baseEXP: 1000
-  currentHP: 0
+  currentHP: 100
   maxHP: 100
-  currentMP: 0
+  currentMP: 30
   maxMP: 30
   mpLevelBonus: 
   strength: 15
@@ -116,6 +116,7 @@ MonoBehaviour:
   gameMenuOpen: 0
   fadeingBetweenAreas: 0
   shopActive: 0
+  battleActive: 0
   itemsHeld:
   - 
   - 
@@ -235,9 +236,9 @@ MonoBehaviour:
   expToNextLevel: 
   maxLevel: 100
   baseEXP: 1000
-  currentHP: 0
+  currentHP: 150
   maxHP: 150
-  currentMP: 0
+  currentMP: 25
   maxMP: 25
   mpLevelBonus: 
   strength: 22
@@ -296,9 +297,9 @@ MonoBehaviour:
   expToNextLevel: 
   maxLevel: 100
   baseEXP: 1000
-  currentHP: 0
+  currentHP: 150
   maxHP: 150
-  currentMP: 0
+  currentMP: 25
   maxMP: 25
   mpLevelBonus: 
   strength: 22

@@ -6,3 +6,4 @@
 - camera cntroller script doesnt have map but custom camera does - still throwing error
 
 - for now just inserting player directly
+	- solution executio order -still not working

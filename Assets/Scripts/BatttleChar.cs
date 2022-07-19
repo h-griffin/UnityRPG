@@ -9,7 +9,8 @@ public class BatttleChar : MonoBehaviour{
     
     public string charName;
     public int currentHP, maxHP, currentMP, maxMP, strength, defence, weaponPower, armrPower;
-    public bool hasDied;    
+    public bool hasDied; 
+    
     // Start is called before the first frame update
     void Start()
     {

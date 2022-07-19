@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         //target = PlayerController.instance.transform; // place player in map
-        target = FindObjectOfType<PlayerController>().transform;
+        target = FindObjectOfType<PlayerController>().transform; // find any object htat has a player controller script
 
         halfHeight = Camera.main.orthographicSize;
         halfWidth = halfHeight * Camera.main.aspect; // aspect ratio 

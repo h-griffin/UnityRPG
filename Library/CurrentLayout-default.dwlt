@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 65
+  controlID: 41
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -237,7 +237,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1242
     y: 0
-    width: 309
+    width: 388
     height: 1067
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -261,9 +261,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1551
+    x: 1630
     y: 0
-    width: 369
+    width: 290
     height: 1067
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -355,7 +355,7 @@ MonoBehaviour:
     m_CachedPref: -50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 2360911783114716853, guid: aea4bac847f704210ad49d59644d1155,
+  m_Palette: {fileID: 6651777163694932331, guid: dd18ed6b207407d4ea8a2cb963eac62d,
     type: 3}
 --- !u!114 &15
 MonoBehaviour:
@@ -518,7 +518,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9ae6ffffcee6ffff5efbfffff4ffffff
+      m_ExpandedIDs: 8248feff6a5dfeffa071feff429bfeff14d9feff14dafeff36dafeff702efffff22effffea2fffff4a30ffff8630ffffc630ffff0844ffff2c44ffff7c44ffff6c81ffffbc95ffffde95ffffaaa7ffffe8c8ffffece4ffff5efbfffff4fffffff8a80000b8ac0000e2ac0000b0af00009cb30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -563,9 +563,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1551
+    x: 1630
     y: 73
-    width: 368
+    width: 289
     height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1242
     y: 73
-    width: 307
+    width: 386
     height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -619,19 +619,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 32
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 32
   m_LastProjectPath: C:\Users\Taco\code\UnityRPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca650000
-    m_LastClickedID: 26058
+    m_SelectedIDs: 68610000
+    m_LastClickedID: 24936
     m_ExpandedIDs: 000000006461000066610000686100006a6100006c6100006e61000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -687,8 +687,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: e648000032dafffffa4a0000c23b0000c63b0000f6500000d83b0000da3b0000a83c000000000000ec5e000048440000dc650000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: e648000032dafffffa4a0000c23b0000c63b0000f6500000d83b0000da3b0000a83c000000000000ec5e000048440000dc6500007e67000074820000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 32
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 110
+  m_DirectoriesAreaWidth: 187
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -844,9 +844,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.88747257, y: 5.517679, z: -412.7795}
+    m_Target: {x: 7.064899, y: -2.1814418, z: -0.13293}
     speed: 2
-    m_Value: {x: 0.88747257, y: 5.517679, z: -412.7795}
+    m_Value: {x: 7.064899, y: -2.1814418, z: -0.13293}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -896,9 +896,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.276366
+    m_Target: 10
     speed: 2
-    m_Value: 13.276366
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2

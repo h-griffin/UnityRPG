@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AreaEntrance.cs" />
     <Compile Include="Assets\Scripts\AreaExit.cs" />
+    <Compile Include="Assets\Scripts\AttackEffect.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BattleChar.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />

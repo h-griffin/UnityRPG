@@ -27,7 +27,10 @@ public class BattleManager : MonoBehaviour
 
     public GameObject uiButtonsHolder;
 
+    // damage
     public BattleMove[] movesList;
+    public GameObject enemyAttackEffect;
+
 
     // Start is called before the first frame update
     void Start()
@@ -243,6 +246,7 @@ public class BattleManager : MonoBehaviour
             }
         }
 
+        Instantiate(enemyAttackEffect, activeBattlers[currentTurn].transform.position, activeBattlers[selectedTarget].transform.rotation);
         DealDamage(selectedTarget, movePower);
     }
     

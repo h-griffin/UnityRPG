@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\BattleMagicSelect.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\BattleMove.cs" />
+    <Compile Include="Assets\Scripts\BattleNotification.cs" />
     <Compile Include="Assets\Scripts\BattleTargetButton.cs" />
     <Compile Include="Assets\Scripts\BatttleChar.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />

@@ -27,6 +27,8 @@ public class BattleManager : MonoBehaviour
 
     public GameObject uiButtonsHolder;
 
+    public BattleMove[] movesList;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -227,9 +229,19 @@ public class BattleManager : MonoBehaviour
         int selectedTarget = players[Random.Range(0, players.Count)];
 
         // pick an attack
+        int selectAttack = Random.Range(0, activeBattlers[currentTurn].movesAvailable.Length);
 
-
+        // find attack and play effect
+        for (int i= 0;i < movesList.Length; i++)
+        {
+            // can battler use attack
+            if(movesList[i].moveName == activeBattlers[currentTurn].movesAvailable[selectAttack])
+            {
+                Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
+            }
+        }
+        
         // deal damage
-        activeBattlers[selectedTarget].currentHP -= 30;
+
     }
 }

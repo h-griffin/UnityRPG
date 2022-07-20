@@ -12,7 +12,7 @@ public class BattleMove
     // store move variables here
     public string moveName;
     public int movePower;
-    public int movecost;
+    public int moveCost;
     public AttackEffect theEffect;
 
 }

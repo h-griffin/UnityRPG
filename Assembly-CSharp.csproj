@@ -61,10 +61,16 @@
     <Compile Include="Assets\Scripts\AttackEffect.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BattleChar.cs" />
+    <Compile Include="Assets\Scripts\BattleMagicSelect.cs" />
     <Compile Include="Assets\Scripts\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\BattleMove.cs" />
+    <Compile Include="Assets\Scripts\BattleNotification.cs" />
+    <Compile Include="Assets\Scripts\BattleTargetButton.cs" />
     <Compile Include="Assets\Scripts\BatttleChar.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CharStats.cs" />
+    <Compile Include="Assets\Scripts\DamageNumber.cs" />
+    <Compile Include="Assets\Scripts\DestroyOverLifetime.cs" />
     <Compile Include="Assets\Scripts\DialogActivator.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
     <Compile Include="Assets\Scripts\EssentialsLoader.cs" />

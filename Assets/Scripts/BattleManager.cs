@@ -30,6 +30,7 @@ public class BattleManager : MonoBehaviour
     // damage
     public BattleMove[] movesList;
     public GameObject enemyAttackEffect;
+    public DamageNumber theDamageNumber;
 
 
     // Start is called before the first frame update
@@ -261,5 +262,9 @@ public class BattleManager : MonoBehaviour
 
         Debug.Log(activeBattlers[currentTurn].charName + " is dealing " + damageCalc + " (" + damageToGive + ") damage to " + activeBattlers[target].charName);
         activeBattlers[target].currentHP -= damageToGive;
+
+        Instantiate(theDamageNumber, activeBattlers[target].transform.position, activeBattlers[target].transform.rotation).setDamage(damageToGive);
+
+
     }
 }

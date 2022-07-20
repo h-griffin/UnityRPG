@@ -14612,6 +14612,10 @@ MonoBehaviour:
     movecost: 10
     theEffect: {fileID: 2952262612444723272, guid: 49112d095fdfcac4a9ec20eeadb6b261,
       type: 3}
+  enemyAttackEffect: {fileID: 5346380133048235292, guid: 17d8016995e26af4e91429ba1f05aa47,
+    type: 3}
+  theDamageNumber: {fileID: 8051281535679616898, guid: f39547013d6137148b7c8edaa7d58b2f,
+    type: 3}
 --- !u!1 &1444442578
 GameObject:
   m_ObjectHideFlags: 0

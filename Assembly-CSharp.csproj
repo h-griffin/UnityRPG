@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\BatttleChar.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CharStats.cs" />
+    <Compile Include="Assets\Scripts\DamageNumber.cs" />
     <Compile Include="Assets\Scripts\DestroyOverLifetime.cs" />
     <Compile Include="Assets\Scripts\DialogActivator.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />

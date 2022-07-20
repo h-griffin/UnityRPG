@@ -320,4 +320,30 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
+
+    public void PlayerAttack(string moveName /*, int selectedTarget*/ )
+
+    {
+        // choose target
+        int selectedTarget = 2;
+
+        int movePower = 0;
+
+        // find attack and play effect
+        for (int i = 0; i < movesList.Length; i++)
+        {
+            // can battler use attack
+            if (movesList[i].moveName == moveName)
+            {
+                Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
+                movePower = movesList[i].movePower;
+            }
+        }
+
+        Instantiate(enemyAttackEffect, activeBattlers[currentTurn].transform.position, activeBattlers[selectedTarget].transform.rotation);
+        DealDamage(selectedTarget, movePower);
+
+        uiButtonsHolder.SetActive(false);
+        NextTurn();
+    }
 }

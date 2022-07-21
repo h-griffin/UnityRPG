@@ -9,7 +9,13 @@ public class BattleChar : MonoBehaviour{
     
     public string charName;
     public int currentHP, maxHP, currentMP, maxMP, strength, defence, weaponPower, armrPower;
-    public bool hasDied; 
+    public bool hasDied;
+
+    //death
+    public SpriteRenderer spriteRenderer;
+    public Sprite deadSprite;
+    public Sprite aliveSprite;
+
     
     // Start is called before the first frame update
     void Start()

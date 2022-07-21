@@ -108,3 +108,6 @@ MonoBehaviour:
   weaponPower: 0
   armrPower: 0
   hasDied: 0
+  spriteRenderer: {fileID: 7082361084682448704}
+  deadSprite: {fileID: 21300046, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}
+  aliveSprite: {fileID: 21300028, guid: e0ddba6d3fcf21f49949fcc95c849aac, type: 3}

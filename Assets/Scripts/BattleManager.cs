@@ -47,6 +47,9 @@ public class BattleManager : MonoBehaviour
 
     public BattleNotification battleNotice;
 
+    // flee
+    public int chanceToFlee = 35;
+
 
     // Start is called before the first frame update
     void Start()
@@ -418,6 +421,26 @@ public class BattleManager : MonoBehaviour
             {
                 magicButtons[i].gameObject.SetActive(false);
             }
+        }
+    }
+
+    public void Flee()
+    {
+        // random change to allow flee
+        int fleeSuccess = Random.Range(0, 100);
+        if(fleeSuccess < chanceToFlee)
+        {
+            // end the battle
+            _battleActive = false;
+            battleScene.SetActive(false);
+
+        }
+        else
+        {
+            // end of turn
+            NextTurn();
+            battleNotice.theText.text = "could not escape! ";
+            battleNotice.Activate();
         }
     }
 }

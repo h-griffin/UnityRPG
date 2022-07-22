@@ -51,9 +51,14 @@ public class BattleManager : MonoBehaviour
 
     // flee
     public int chanceToFlee = 35;
+    private bool _fleeing;
 
     // game over scene
     public string gameOverScene;
+
+    // rewards
+    public int rewardXP;
+    public string[] rewardItems;
 
 
 
@@ -451,6 +456,7 @@ public class BattleManager : MonoBehaviour
             // end the battle
             //_battleActive = false;
             //battleScene.SetActive(false);
+            _fleeing = true;
             StartCoroutine(EndBattleCo());
 
         }
@@ -502,7 +508,21 @@ public class BattleManager : MonoBehaviour
         // clear memory 
         activeBattlers.Clear();
         currentTurn = 0;
-        GameManager.instance.battleActive = false;
+        //GameManager.instance.battleActive = false;
+
+        // also called when flee battle so reward screen not open
+        if (_fleeing)
+        {
+            //dont open reward screen
+            GameManager.instance.battleActive = false;
+            _fleeing = false;
+        }
+        else
+        {
+            // open reward screen
+            BattleReward.instance.OpenRewardScreen(rewardXP, rewardItems);
+        }
+
 
         // music
         AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);

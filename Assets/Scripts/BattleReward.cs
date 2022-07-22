@@ -22,6 +22,8 @@ public class BattleReward : MonoBehaviour
     void Start()
     {
         instance = this;
+
+       
     }
 
     // Update is called once per frame
@@ -51,6 +53,25 @@ public class BattleReward : MonoBehaviour
 
     public void CloseRewardScreen()
     {
+        // apply xp  
+        for(int i = 0; i < GameManager.instance.playerStats.Length; i++)
+        {
+            if (GameManager.instance.playerStats[i].gameObject.activeInHierarchy)
+            {
+                GameManager.instance.playerStats[i].AddExp(xpEarned);
+            }
+        }
+
+        // give items
+        for(int i = 0; i <rewardItems.Length; i++)
+        {
+            GameManager.instance.AddItem(rewardItems[i]);
+        }
+
+
+        rewardScreen.SetActive(false);
+        // while reward screen up dont open menues or move
+        GameManager.instance.battleActive = false;
 
     }
 }

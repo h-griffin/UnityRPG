@@ -63,7 +63,7 @@ public class BattleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            BattleStart( new string[] { "Eyeball", "Spider", "Skeleton" });
+            BattleStart( new string[] { "Eyeball" });
         }
 
         // turns
@@ -223,16 +223,17 @@ public class BattleManager : MonoBehaviour
         {
             if (allEnemiesDead)
             {
-                // end battle in vicory 
+                // end battle in victory\
+                StartCoroutine(EndBattleCo());
             }
             else
             {
                 // end battle in failure
             }
 
-            battleScene.SetActive(false);
-            GameManager.instance.battleActive = false;
-            _battleActive = false;
+            //battleScene.SetActive(false);
+            //GameManager.instance.battleActive = false;
+            //_battleActive = false;
         }
         else
         {
@@ -441,8 +442,9 @@ public class BattleManager : MonoBehaviour
         if(fleeSuccess < chanceToFlee)
         {
             // end the battle
-            _battleActive = false;
-            battleScene.SetActive(false);
+            //_battleActive = false;
+            //battleScene.SetActive(false);
+            StartCoroutine(EndBattleCo());
 
         }
         else
@@ -452,5 +454,51 @@ public class BattleManager : MonoBehaviour
             battleNotice.theText.text = "could not escape! ";
             battleNotice.Activate();
         }
+    }
+
+    // end battle cycle - 
+    public IEnumerator EndBattleCo()
+    {
+        _battleActive = false;
+        uiButtonsHolder.SetActive(false);
+        targetMenu.SetActive(false);
+        magicMenu.SetActive(false);
+        // item menu 
+
+        yield return new WaitForSeconds(.5f);
+        UIFade.instance.FadeToBlack();
+
+        yield return new WaitForSeconds(1.5f);
+        // update health to game manager 
+        for(int i = 0; i < activeBattlers.Count; i++)
+        {
+            if (activeBattlers[i].isPlayer)
+            {
+                for (int j = 0; j < GameManager.instance.playerStats.Length; j++)
+                {
+                    if(activeBattlers[i].charName == GameManager.instance.playerStats[j].charName)
+                    {
+                        GameManager.instance.playerStats[j].currentHP = activeBattlers[i].currentHP;
+                        GameManager.instance.playerStats[j].currentMP = activeBattlers[i].currentMP;
+                        // add all otehr stats for game menu
+                    }
+                }
+            }
+
+            // remove all battlers from scene when battle ends
+            Destroy(activeBattlers[i].gameObject);
+        }
+
+        UIFade.instance.FadeFromBlack();
+        battleScene.SetActive(false);
+
+        // clear memory 
+        activeBattlers.Clear();
+        currentTurn = 0;
+        GameManager.instance.battleActive = false;
+
+        // music
+        AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);
+        
     }
 }

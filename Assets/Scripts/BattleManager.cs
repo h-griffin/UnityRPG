@@ -197,10 +197,13 @@ public class BattleManager : MonoBehaviour
             if(activeBattlers[i].currentHP == 0)
             {
                 // handle dead battler
-
                 if (activeBattlers[i].isPlayer)
                 {
                     activeBattlers[i].spriteRenderer.sprite = activeBattlers[i].deadSprite;
+                }
+                else
+                {
+                    activeBattlers[i].EnemyFade();
                 }
             }
             else
@@ -381,7 +384,8 @@ public class BattleManager : MonoBehaviour
         // should button be active
         for(int i =0; i < targetButtons.Length; i++)
         {
-            if(Enemies.Count > i)
+            // disable enemy target button when dead
+            if(Enemies.Count > i && activeBattlers[Enemies[i]].currentHP > 0)
             {
                 targetButtons[i].gameObject.SetActive(true);
 

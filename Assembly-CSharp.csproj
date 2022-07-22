@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\BattleManager.cs" />
     <Compile Include="Assets\Scripts\BattleMove.cs" />
     <Compile Include="Assets\Scripts\BattleNotification.cs" />
+    <Compile Include="Assets\Scripts\BattleReward.cs" />
     <Compile Include="Assets\Scripts\BattleTargetButton.cs" />
     <Compile Include="Assets\Scripts\BatttleChar.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\EssentialsLoader.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameMenu.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemButton.cs" />
     <Compile Include="Assets\Scripts\LoadingScene.cs" />

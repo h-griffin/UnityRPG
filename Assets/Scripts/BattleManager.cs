@@ -4,6 +4,8 @@ using UnityEngine;
 
 // access to text
 using UnityEngine.UI;
+//access to scenes
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
@@ -47,6 +49,18 @@ public class BattleManager : MonoBehaviour
 
     public BattleNotification battleNotice;
 
+    // flee
+    public int chanceToFlee = 35;
+    private bool _fleeing;
+
+    // game over scene
+    public string gameOverScene;
+
+    // rewards
+    public int rewardXP;
+    public string[] rewardItems;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +74,7 @@ public class BattleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            BattleStart( new string[] { "Eyeball", "Spider", "Skeleton" });
+            BattleStart( new string[] { "Eyeball" });
         }
 
         // turns
@@ -194,12 +208,21 @@ public class BattleManager : MonoBehaviour
             if(activeBattlers[i].currentHP == 0)
             {
                 // handle dead battler
+                if (activeBattlers[i].isPlayer)
+                {
+                    activeBattlers[i].spriteRenderer.sprite = activeBattlers[i].deadSprite;
+                }
+                else
+                {
+                    activeBattlers[i].EnemyFade();
+                }
             }
             else
             {
                 if (activeBattlers[i].isPlayer)
                 {
                     allPlayersDead = false;
+                    activeBattlers[i].spriteRenderer.sprite = activeBattlers[i].aliveSprite;
                 }else
                 {
                     allEnemiesDead = false;
@@ -211,16 +234,18 @@ public class BattleManager : MonoBehaviour
         {
             if (allEnemiesDead)
             {
-                // end battle in vicory 
+                // end battle in victory\
+                StartCoroutine(EndBattleCo());
             }
             else
             {
                 // end battle in failure
+                StartCoroutine(GameOverCo());
             }
 
-            battleScene.SetActive(false);
-            GameManager.instance.battleActive = false;
-            _battleActive = false;
+            //battleScene.SetActive(false);
+            //GameManager.instance.battleActive = false;
+            //_battleActive = false;
         }
         else
         {
@@ -372,7 +397,8 @@ public class BattleManager : MonoBehaviour
         // should button be active
         for(int i =0; i < targetButtons.Length; i++)
         {
-            if(Enemies.Count > i)
+            // disable enemy target button when dead
+            if(Enemies.Count > i && activeBattlers[Enemies[i]].currentHP > 0)
             {
                 targetButtons[i].gameObject.SetActive(true);
 
@@ -419,5 +445,98 @@ public class BattleManager : MonoBehaviour
                 magicButtons[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void Flee()
+    {
+        // random change to allow flee
+        int fleeSuccess = Random.Range(0, 100);
+        if(fleeSuccess < chanceToFlee)
+        {
+            // end the battle
+            //_battleActive = false;
+            //battleScene.SetActive(false);
+            _fleeing = true;
+            StartCoroutine(EndBattleCo());
+
+        }
+        else
+        {
+            // end of turn
+            NextTurn();
+            battleNotice.theText.text = "could not escape! ";
+            battleNotice.Activate();
+        }
+    }
+
+    // end battle cycle - 
+    public IEnumerator EndBattleCo()
+    {
+        _battleActive = false;
+        uiButtonsHolder.SetActive(false);
+        targetMenu.SetActive(false);
+        magicMenu.SetActive(false);
+        // item menu 
+
+        yield return new WaitForSeconds(.5f);
+        UIFade.instance.FadeToBlack();
+
+        yield return new WaitForSeconds(1.5f);
+        // update health to game manager 
+        for(int i = 0; i < activeBattlers.Count; i++)
+        {
+            if (activeBattlers[i].isPlayer)
+            {
+                for (int j = 0; j < GameManager.instance.playerStats.Length; j++)
+                {
+                    if(activeBattlers[i].charName == GameManager.instance.playerStats[j].charName)
+                    {
+                        GameManager.instance.playerStats[j].currentHP = activeBattlers[i].currentHP;
+                        GameManager.instance.playerStats[j].currentMP = activeBattlers[i].currentMP;
+                        // add all otehr stats for game menu
+                    }
+                }
+            }
+
+            // remove all battlers from scene when battle ends
+            Destroy(activeBattlers[i].gameObject);
+        }
+
+        UIFade.instance.FadeFromBlack();
+        battleScene.SetActive(false);
+
+        // clear memory 
+        activeBattlers.Clear();
+        currentTurn = 0;
+        //GameManager.instance.battleActive = false;
+
+        // also called when flee battle so reward screen not open
+        if (_fleeing)
+        {
+            //dont open reward screen
+            GameManager.instance.battleActive = false;
+            _fleeing = false;
+        }
+        else
+        {
+            // open reward screen
+            BattleReward.instance.OpenRewardScreen(rewardXP, rewardItems);
+        }
+
+
+        // music
+        AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);
+        
+    }
+
+    public IEnumerator GameOverCo()
+    {
+        _battleActive = false;
+        UIFade.instance.FadeToBlack();
+        yield return new WaitForSeconds(1.5f);
+
+        battleScene.SetActive(false);
+        // load new scene - game over
+        SceneManager.LoadScene(gameOverScene);
     }
 }

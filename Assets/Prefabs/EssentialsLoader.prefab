@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2994103208660424016}
   - component: {fileID: 2344888150022020444}
+  - component: {fileID: -3412901207320282113}
   m_Layer: 0
   m_Name: EssentialsLoader
   m_TagString: Untagged
@@ -49,3 +50,18 @@ MonoBehaviour:
   gameMan: {fileID: 1197127864592793421, guid: e38f5e3ff37be44d297011195f61cf4b, type: 3}
   audioManager: {fileID: 4541497643198066481, guid: 741abdf0ef243410fb70175efd956703,
     type: 3}
+  battleManager: {fileID: 0}
+--- !u!114 &-3412901207320282113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095031486590459265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e7ef16496c5ec4f9f5d74006d91451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuScene: MainMenu
+  loadGameScene: LoadingScene

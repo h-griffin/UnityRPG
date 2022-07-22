@@ -108,3 +108,7 @@ MonoBehaviour:
   weaponPower: 5
   armrPower: 5
   hasDied: 0
+  spriteRenderer: {fileID: 3095546842916068349}
+  deadSprite: {fileID: 0}
+  aliveSprite: {fileID: 0}
+  fadeSpeed: 1

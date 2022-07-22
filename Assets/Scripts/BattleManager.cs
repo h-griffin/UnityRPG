@@ -4,6 +4,8 @@ using UnityEngine;
 
 // access to text
 using UnityEngine.UI;
+//access to scenes
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
@@ -49,6 +51,10 @@ public class BattleManager : MonoBehaviour
 
     // flee
     public int chanceToFlee = 35;
+
+    // game over scene
+    public string gameOverScene;
+
 
 
     // Start is called before the first frame update
@@ -229,6 +235,7 @@ public class BattleManager : MonoBehaviour
             else
             {
                 // end battle in failure
+                StartCoroutine(GameOverCo());
             }
 
             //battleScene.SetActive(false);
@@ -500,5 +507,16 @@ public class BattleManager : MonoBehaviour
         // music
         AudioManager.instance.PlayBGM(FindObjectOfType<CameraController>().musicToPlay);
         
+    }
+
+    public IEnumerator GameOverCo()
+    {
+        _battleActive = false;
+        UIFade.instance.FadeToBlack();
+        yield return new WaitForSeconds(1.5f);
+
+        battleScene.SetActive(false);
+        // load new scene - game over
+        SceneManager.LoadScene(gameOverScene);
     }
 }
